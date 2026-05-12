@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Carrera por la Inteligencia Artificial | Investigación de Datos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- HERO -->
+        <header class="hero">
+            <h1>La Carrera por la<br>Inteligencia Artificial</h1>
+            <p class="hero-sub">Una investigación de datos sobre cada modelo principal, benchmark y avance desde 2017 hasta 2026.</p>
+            <div class="hero-dateline">PUBLICADO: MAYO 2026 &middot; DATOS: EPOCH AI, PAPERS WITH CODE, VELLUM</div>
+            <div class="hero-stats">
+                <div class="hero-stat-block">
+                    <span class="stat-value">300+</span>
+                    <span class="stat-label">Modelos rastreados</span>
+                </div>
+                <div class="hero-stat-block">
+                    <span class="stat-value">10,000,000</span>
+                    <span class="stat-label">Máximo de tokens de contexto</span>
+                </div>
+                <div class="hero-stat-block">
+                    <span class="stat-value">5,357&times;</span>
+                    <span class="stat-label">Brecha de costo: GLM-5/Opus</span>
+                </div>
+                <div class="hero-stat-block">
+                    <span class="stat-value">0.8 pts</span>
+                    <span class="stat-label">Brecha entre abierto y cerrado</span>
+                </div>
+            </div>
+        </header>
+
+        <div class="grid-main">
+            <main>
+                <!-- SECTION 01: TIMELINE -->
+                <section id="section-01">
+                    <span class="section-number">01</span>
+                    <div class="rubric">Análisis</div>
+                    <h2>Nueve Años que Cambiaron Todo</h2>
+                    <table class="timeline-table" id="timeline-table">
+                        <thead>
+                            <tr>
+                                <th>Año</th>
+                                <th>Nombre del Modelo</th>
+                                <th>Creador</th>
+                                <th>Paráms</th>
+                                <th>Hecho Clave</th>
+                            </tr>
+                        </thead>
+                        <tbody id="timeline-body">
+                            <!-- Inyectado por JS -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 02: BENCHMARK WARS -->
+                <section id="section-02">
+                    <span class="section-number">02</span>
+                    <div class="rubric">Datos</div>
+                    <h2>¿Quién Puntuó Más Alto?</h2>
+                    <p class="hero-sub">Cuatro benchmarks. Ocho modelos. Un ganador por categoría.</p>
+                    <div class="benchmark-grid">
+                        <div class="chart-container">
+                            <div class="chart-title">GPQA (Ciencia)</div>
+                            <canvas id="chart-gpqa" height="300"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-title">SWE-bench (Programación)</div>
+                            <canvas id="chart-swe" height="300"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-title">HumanEval (Python)</div>
+                            <canvas id="chart-human-eval" height="300"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <div class="chart-title">MMLU (Conocimiento)</div>
+                            <canvas id="chart-mmlu" height="300"></canvas>
+                        </div>
+                    </div>
+                    <div class="callout-box">
+                        <p>GEMINI 3.1 PRO lidera en razonamiento científico. CLAUDE OPUS 4.6 lidera en programación real. La brecha entre el #1 y el #8 nunca ha sido tan pequeña.</p>
+                    </div>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 03: THE MEMORY RACE -->
+                <section id="section-03">
+                    <span class="section-number">03</span>
+                    <div class="rubric">Explicación</div>
+                    <h2>¿Cuánto Puede Recordar una IA?</h2>
+                    <div class="chart-container">
+                        <div class="chart-title">Capacidad de Ventana de Contexto (Tokens, Escala Log)</div>
+                        <canvas id="chart-context" height="400"></canvas>
+                    </div>
+                    <p style="margin-top:20px; font-family:var(--font-mono); font-size:0.9rem;">
+                        Nota: Se utiliza escala logarítmica para visualizar el crecimiento exponencial de 128k a 10M de tokens.
+                    </p>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 04: THE COST INVESTIGATION -->
+                <section id="section-04">
+                    <span class="section-number">04</span>
+                    <div class="rubric">Investigación</div>
+                    <h2>Inteligencia por $0.10 por Millón de Tokens</h2>
+                    <div class="chart-container">
+                        <div class="chart-title">Rendimiento vs. Costo de Entrada ($/1M Tokens)</div>
+                        <canvas id="chart-cost-scatter" height="300"></canvas>
+                    </div>
+                    <table class="cost-table" id="cost-comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Modelo</th>
+                                <th>Entrada $/M</th>
+                                <th>Salida $/M</th>
+                                <th>GPQA</th>
+                                <th>SWE</th>
+                                <th>Contexto</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cost-table-body">
+                            <!-- Inyectado por JS -->
+                        </tbody>
+                    </table>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 05: COST CALCULATOR -->
+                <section id="section-05">
+                    <span class="section-number">05</span>
+                    <div class="rubric">Herramienta</div>
+                    <h2>Calcula los Números Tú Mismo</h2>
+                    <div class="calculator-card">
+                        <div class="calc-row">
+                            <div class="input-group">
+                                <label for="calc-model-a">Modelo de Comparación A</label>
+                                <select id="calc-model-a" aria-label="Modelo de Comparación A"></select>
+                            </div>
+                            <div class="input-group">
+                                <label for="calc-model-b">Modelo de Comparación B</label>
+                                <select id="calc-model-b" aria-label="Modelo de Comparación B"></select>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="vol-slider">Volumen Diario (Millones de Tokens): <span id="vol-display">50</span>M</label>
+                            <input type="range" id="vol-slider" min="1" max="1000" value="50" aria-label="Volumen Diario en Millones de Tokens">
+                        </div>
+                        <div class="calc-results">
+                            <div class="result-block">
+                                <span class="result-value" id="res-a-val">$1,500.00</span>
+                                <span class="result-label" id="res-a-name">GPT-5.4</span>
+                            </div>
+                            <div class="result-block">
+                                <span class="result-value" id="res-b-val">$0.03</span>
+                                <span class="result-label" id="res-b-name">GLM-5</span>
+                            </div>
+                        </div>
+                        <div class="multiplier-box" id="multiplier-text">
+                            GLM-5 ES 50,000&times; MÁS BARATO POR DÍA CON ESTE VOLUMEN
+                        </div>
+                    </div>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 06: THE PLAYERS -->
+                <section id="section-06">
+                    <span class="section-number">06</span>
+                    <div class="rubric">Perfiles</div>
+                    <h2>Los Cinco Laboratorios que Moldean la IA en 2026</h2>
+                    <div class="players-grid" id="players-grid">
+                        <!-- Inyectado por JS -->
+                    </div>
+                </section>
+
+                <hr class="thick">
+
+                <!-- SECTION 07: LIVE DATA TICKER -->
+                <section id="section-07">
+                    <span class="section-number">07</span>
+                    <div class="rubric"><span class="blinking-dot"></span>En Vivo</div>
+                    <h2>Sucediendo Justo Ahora</h2>
+                    <div class="ticker-row">
+                        <div class="ticker-item">
+                            <span class="ticker-value" id="tick-calls">000,000,000</span>
+                            <span class="stat-label">Llamadas API esta sesión</span>
+                            <p style="font-style:italic; font-size:0.8rem; margin-top:5px;">Rendimiento global simulado.</p>
+                        </div>
+                        <div class="ticker-item">
+                            <span class="ticker-value" id="tick-papers">000</span>
+                            <span class="stat-label">Papers hoy</span>
+                            <p style="font-style:italic; font-size:0.8rem; margin-top:5px;">Envios a ArXiv (categoría IA).</p>
+                        </div>
+                        <div class="ticker-item">
+                            <span class="ticker-value" id="tick-gpu">0,000,000</span>
+                            <span class="stat-label">Horas GPU hoy</span>
+                            <p style="font-style:italic; font-size:0.8rem; margin-top:5px;">Uso estimado de clusters de entrenamiento.</p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+
+            <aside class="sidebar">
+                <div class="pull-quote">
+                    <p>"Una ventana de contexto de 10 millones de tokens admite 7,500 páginas en un solo prompt."</p>
+                    <cite>&mdash; Unidad de Análisis de Datos</cite>
+                </div>
+                <div class="pull-quote" style="background:var(--accent-red); color:white; border-color:var(--pure-black);">
+                    <p>"DeepSeek sacude la industria a $0.27/M de tokens frente a los $15 de GPT."</p>
+                    <cite>&mdash; Informe de Mercado</cite>
+                </div>
+                <div class="pull-quote">
+                    <p>"La brecha entre modelos abiertos y cerrados: 0.8 puntos de benchmark."</p>
+                    <cite>&mdash; Boletín de Benchmarks</cite>
+                </div>
+            </aside>
+        </div>
+
+        <footer>
+            <p>FUENTES DE DATOS: Epoch AI &middot; Papers With Code &middot; Vellum LLM Leaderboard &middot; AIFlashReport &middot; MindStudio &middot; Anuncios de empresas. Valores de benchmark a mayo de 2026. Estimaciones indicadas donde corresponde.</p>
+        </footer>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

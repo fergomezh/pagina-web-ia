@@ -307,19 +307,20 @@ function setupCalculator() {
 function renderPlayers() {
     const grid = $('players-grid');
     labs.forEach(lab => {
-        const card = document.createElement('div');
-        card.className = 'player-card';
-        card.style.borderTop = `6px solid ${lab.colors}`;
-        card.innerHTML = `
-            <span class="player-mono">Est. ${lab.year}</span>
-            <div class="player-name">${lab.name}</div>
-            <span class="player-mono">Flagship: ${lab.model}</span>
-            <ul class="player-list">
-                ${lab.bullets.map(b => `<li>${b}</li>`).join('')}
-            </ul>
-            <span class="player-score">${lab.score} GPQA</span>
+        const col = document.createElement('div');
+        col.className = 'col-lg col-md-4 col-sm-6';
+        col.innerHTML = `
+            <div class="player-card" style="border-top: 6px solid ${lab.colors}">
+                <span class="player-mono">Est. ${lab.year}</span>
+                <div class="player-name h2 mb-2">${lab.name}</div>
+                <span class="player-mono">Flagship: ${lab.model}</span>
+                <ul class="player-list">
+                    ${lab.bullets.map(b => `<li>${b}</li>`).join('')}
+                </ul>
+                <span class="player-score mt-auto">${lab.score} GPQA</span>
+            </div>
         `;
-        grid.appendChild(card);
+        grid.appendChild(col);
     });
 }
 

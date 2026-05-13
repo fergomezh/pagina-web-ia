@@ -1,0 +1,14 @@
+runtime: php82
+
+handlers:
+  # Servir archivos estáticos directamente
+  - url: /css
+    static_dir: css
+
+  - url: /js
+    static_dir: js
+
+  # Servir index.html para cualquier otra ruta
+  - url: /.*
+    static_files: index.html
+    upload: index.html
